@@ -5,6 +5,8 @@ set(CMAKE_CXX_STANDARD 98)
 
 
 add_executable(cpp01_ex_00
-        ex00/Template.cpp
-        ex00/Template.hpp
-    ex00/main.cpp)
+        ex00/Zombie.cpp
+        ex00/Zombie.hpp
+        ex00/randomChump.cpp
+    ex00/main.cpp
+        ex00/newZombie.cpp)

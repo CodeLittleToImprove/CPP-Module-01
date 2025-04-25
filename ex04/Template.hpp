@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Template.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbui-quo <tbui-quo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/24 16:11:14 by tbui-quo          #+#    #+#             */
-/*   Updated: 2025/04/24 17:44:30 by tbui-quo         ###   ########.fr       */
+/*   Created: 2025/04/24 16:11:09 by tbui-quo          #+#    #+#             */
+/*   Updated: 2025/04/24 16:11:10 by tbui-quo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "Zombie.hpp"
 
-int main(void)
+
+# ifndef CPP0X_TEMPLATE_HPP
+# define CPP0X_TEMPLATE_HPP
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <sstream>
+
+
+class	Template
 {
-	Zombie *zombie1 = newZombie("Heapy");	// Creates a Zombie on the heap using newZombie() function
-	randomChump("Stacky");					// Creates a Zombie on the stack using randomChump() function
-	Zombie zombie2("Stacky2");				// Creates a Zombie on the stack directly in the main function
-	zombie1->announce();
-	delete zombie1;
-	return 0;
-}
+private:
+
+public:
+
+};
+
+#endif //CPP0X_TEMPLATE_HPP
