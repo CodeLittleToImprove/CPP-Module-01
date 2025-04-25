@@ -11,9 +11,17 @@
 /* ************************************************************************** */
 
 
-#include "Template.hpp"
+#include "Zombie.hpp"
 
 int main(void)
 {
+	int		hordeSize = 5;
+	Zombie	*zombieHorde = createZombieHorde(hordeSize, "Walker");
 
+	for (int i = 0; i < hordeSize; i++)
+	{
+		zombieHorde[i].announce();
+	}
+	delete [] zombieHorde;
+	return (0);
 }

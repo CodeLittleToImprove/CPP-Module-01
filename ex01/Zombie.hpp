@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Template.cpp                                        :+:      :+:    :+:   */
+/*   Template.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbui-quo <tbui-quo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/24 16:11:05 by tbui-quo          #+#    #+#             */
-/*   Updated: 2025/04/24 16:11:06 by tbui-quo         ###   ########.fr       */
+/*   Created: 2025/04/24 16:11:09 by tbui-quo          #+#    #+#             */
+/*   Updated: 2025/04/24 16:11:10 by tbui-quo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "Template.hpp"
+# ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
+#include <iostream>
 
-Template::Template()
+class	Zombie
 {
+private:
+	std::string	name;
+public:
+	Zombie();
+	~Zombie();
+	Zombie(std::string name);
+	void	announce();
+	void	setName(std::string name);
+};
 
-}
-
-Template::~Template()
-{
-
-}
-
+Zombie	*newZombie(std::string name);
+Zombie	*createZombieHorde(int n, std::string name);
+#endif
