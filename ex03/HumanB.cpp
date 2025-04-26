@@ -10,31 +10,33 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
 
-Zombie::Zombie()
-{
+#include "HumanB.hpp"
 
-}
 
-Zombie::~Zombie()
-{
-	std::cout << "Deconstructor called: " << this->_name << ": Why did the zombie die—again? Because he accidentally ate gluten-free brains… no substance!" << std::endl;
-}
-
-Zombie::Zombie(std:: string name) // Parameterized constructor
+HumanB::HumanB(std::string name)
 {
 	this->_name = name;
+	this->_is_armed = false;
+	std::cout << this->_name << " entered Summoners Rift " << std::endl;
 }
 
-void Zombie::announce()
+HumanB::~HumanB()
 {
-	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << this->_name << " died" << std::endl;
 }
 
-void Zombie::setName(std::string name)
+void HumanB::setWeapon(Weapon &weapon)
 {
-	this->_name = name;
+	this->_weapon = &weapon;
+	this->_is_armed = true;
+	std::cout << this->_name << " picked up a " << this->_weapon->getType() << " to join the fiesta " << std::endl;
 }
 
-
+void HumanB::attack()
+{
+	if (this->_is_armed)
+		std::cout << this->_name << " attacks with his " << this->_weapon->getType() << std::endl;
+	else
+		std::cout << this->_name << " attacks with his bare hands " << std::endl;
+}

@@ -15,17 +15,17 @@
 
 Zombie::Zombie(std:: string name) // Parameterized constructor
 {
-	this->name = name;
+	this->_name = name;
 }
 
 Zombie::~Zombie()
 {
-	std::cout << "Deconstructor called: " << this->name << ": Why did the zombie die—again? Because he accidentally ate gluten-free brains… no substance!" << std::endl;
+	std::cout << "Deconstructor called: " << this->_name << ": Why did the zombie die—again? Because he accidentally ate gluten-free brains… no substance!" << std::endl;
 }
 
 void Zombie::announce()
 {
-	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
 

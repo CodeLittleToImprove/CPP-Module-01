@@ -21,3 +21,12 @@ add_executable(cpp01_ex_01
 add_executable(cpp01_ex_02
         ex02/main.cpp
 )
+
+add_executable(cpp01_ex_03
+        ex03/HumanA.cpp
+        ex03/HumanA.hpp
+        ex03/HumanB.cpp
+        ex03/HumanB.hpp
+        ex03/Weapon.cpp
+        ex03/main.cpp
+)

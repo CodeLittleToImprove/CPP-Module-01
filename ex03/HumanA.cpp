@@ -11,16 +11,22 @@
 /* ************************************************************************** */
 
 
-#include "Template.hpp"
+#include "HumanA.hpp"
 
 
-Template::Template()
+HumanA::HumanA(std::string name, Weapon &weapon)
+	:_weapon(weapon) // this is called initializer list must be used because of reference in weapon
 {
-
+	this->_name = name;
+	std::cout << this->_name << " has as weapon a " << this->_weapon.getType() << std::endl;
 }
 
-Template::~Template()
+HumanA::~HumanA()
 {
-
+	std::cout << this->_name << " died" << std::endl;
 }
 
+void HumanA::attack()
+{
+	std::cout << this->_name << " attacks with his " << this->_weapon.getType() << std::endl;
+}

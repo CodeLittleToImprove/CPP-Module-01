@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Template.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbui-quo <tbui-quo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/24 16:11:14 by tbui-quo          #+#    #+#             */
-/*   Updated: 2025/04/24 17:44:30 by tbui-quo         ###   ########.fr       */
+/*   Created: 2025/04/24 16:11:05 by tbui-quo          #+#    #+#             */
+/*   Updated: 2025/04/24 16:11:06 by tbui-quo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+#include "Weapon.hpp"
 
-int main(void)
+Weapon::Weapon(const std::string &type)
 {
-	{
-		Weapon club = Weapon("crude spiked club");
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
-	}
-	{
-		Weapon club = Weapon("crude spiked club");
-		HumanB jim("Jim");
-		jim.attack();
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
-	}
+	this->_type = type;
+}
+
+Weapon::~Weapon()
+{
+	std::cout << "NOOOOO my beloved " << this->getType() << " broke" << std::endl;
+}
+
+std::string Weapon::getType() const
+{
+	return this->_type;
+}
+
+void Weapon::setType(const std::string &type)
+{
+	this->_type = type;
 }

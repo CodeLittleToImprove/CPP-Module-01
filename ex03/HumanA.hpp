@@ -11,20 +11,24 @@
 /* ************************************************************************** */
 
 
-# ifndef CPP0X_TEMPLATE_HPP
-# define CPP0X_TEMPLATE_HPP
+# ifndef HUMANA_HPP
+# define HUMANA_HPP
+
+# include "Weapon.hpp"
+
 #include <iostream>
-#include <iomanip>
-#include <string>
-#include <sstream>
 
 
-class	Template
+
+class	HumanA
 {
 private:
-
+	std::string		_name;
+	Weapon			&_weapon;
 public:
-
+	HumanA(std::string name, Weapon &weapon);
+	~HumanA();
+	void	attack();
 };
 
-#endif //CPP0X_TEMPLATE_HPP
+#endif

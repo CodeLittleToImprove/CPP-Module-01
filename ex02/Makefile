@@ -17,7 +17,7 @@ CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 # Target executable
-TARGET = HITHISISBRAIN
+TARGET = hithisisbrain
 
 # Source files (using wildcard)
 SRC = $(wildcard *.cpp)
