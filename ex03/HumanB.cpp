@@ -33,7 +33,7 @@ void HumanB::setWeapon(Weapon &weapon)
 	std::cout << this->_name << " picked up a " << this->_weapon->getType() << " to join the fiesta " << std::endl;
 }
 
-void HumanB::attack()
+void HumanB::attack() // here we use a pointer because we don't have to initialise a weapon immediately
 {
 	if (this->_is_armed)
 		std::cout << this->_name << " attacks with his " << this->_weapon->getType() << std::endl;
