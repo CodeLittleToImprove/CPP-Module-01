@@ -10,10 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include "Template.hpp"
+# include <iostream>
 
 int main(void)
 {
+	// A string variable initialized
+	std::string brain = "HI THIS IS BRAIN";
 
+	// A pointer to the string
+	std::string* stringPTR = &brain;
+
+	// A reference to the string // kinda equal to just using brain directly
+	std::string& stringREF = brain;
+
+	// Print memory addresses
+	std::cout << "Memory address of brain:    " << &brain << std::endl;
+	std::cout << "Memory address held by PTR: " << stringPTR << std::endl;
+	std::cout << "Memory address held by REF: " << &stringREF << std::endl;
+
+	std::cout << std::endl;
+
+	// Print values
+	std::cout << "Value of brain:              " << brain << std::endl;
+	std::cout << "Value pointed to by PTR:     " << *stringPTR << std::endl;
+	std::cout << "Value pointed to by REF:     " << stringREF << std::endl;
+
+	return 0;
 }

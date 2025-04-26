@@ -28,6 +28,5 @@ public:
 	void	setName(std::string name);
 };
 
-Zombie	*newZombie(std::string name);
 Zombie	*createZombieHorde(int n, std::string name);
 #endif

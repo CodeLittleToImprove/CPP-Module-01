@@ -37,6 +37,4 @@ void Zombie::setName(std::string name)
 	this->name = name;
 }
 
-Zombie	*newZombie(std::string name);
-Zombie	*createZombieHorde(int n, std::string name);
 

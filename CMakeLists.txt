@@ -17,3 +17,7 @@ add_executable(cpp01_ex_01
         ex01/main.cpp
         ex01/zombieHorde.cpp
         ex01/zombieHorde.cpp)
+
+add_executable(cpp01_ex_02
+        ex02/main.cpp
+)

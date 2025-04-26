@@ -16,7 +16,7 @@
 int main(void)
 {
 	int		hordeSize = 5;
-	Zombie	*zombieHorde = createZombieHorde(hordeSize, "Walker");
+	Zombie	*zombieHorde = createZombieHorde(hordeSize, "Walker Team A");
 
 	for (int i = 0; i < hordeSize; i++)
 	{
