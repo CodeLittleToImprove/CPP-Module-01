@@ -30,3 +30,7 @@ add_executable(cpp01_ex_03
         ex03/Weapon.cpp
         ex03/main.cpp
 )
+
+add_executable(cpp01_ex_04
+        ex04/main.cpp
+)
