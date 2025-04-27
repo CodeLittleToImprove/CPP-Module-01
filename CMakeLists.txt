@@ -34,3 +34,8 @@ add_executable(cpp01_ex_03
 add_executable(cpp01_ex_04
         ex04/main.cpp
 )
+
+add_executable(cpp01_ex_05
+        ex05/Harl.cpp
+        ex05/main.cpp
+)

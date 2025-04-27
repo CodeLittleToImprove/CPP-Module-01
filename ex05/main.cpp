@@ -11,9 +11,15 @@
 /* ************************************************************************** */
 
 
-#include "Template.hpp"
+#include "Harl.hpp"
 
 int main(void)
 {
+	Harl bot;
 
+	bot.complain("INFO");
+	bot.complain("ERROR");
+	bot.complain("DEBUG");
+	bot.complain("WARNING");
+	bot.complain("Unknown");
 }
