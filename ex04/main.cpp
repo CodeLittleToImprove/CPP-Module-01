@@ -19,6 +19,8 @@ void replaceAndWrite(std::ifstream &inputFile, std::ofstream &outputFile, const 
 	std::string	line;
 	size_t		pos;
 	bool		found = false;
+	bool		isFirstLine = true;
+
 
 	while (std::getline(inputFile, line))
 	{
@@ -28,7 +30,13 @@ void replaceAndWrite(std::ifstream &inputFile, std::ofstream &outputFile, const 
 			line.insert(pos, replaceString);
 			found = true;
 		}
-		outputFile << line << std::endl;
+		if (isFirstLine)
+		{
+			outputFile << line;
+			isFirstLine = false;
+		}
+		else
+			outputFile << std::endl << line;
 	}
 	if (!found)
 		std::cout << "Warning: No occurrences of \"" << searchString << "\" were found in the file." << std::endl;
