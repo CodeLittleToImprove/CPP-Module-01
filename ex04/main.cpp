@@ -46,7 +46,7 @@ int main(int argc, char **argv)
 {
 	if (argc != 4)
 	{
-		std::cout << "Usage: " << " <filename> <search> <string>" << std::endl;
+		std::cout << "Usage: " << " <filename> <search> <replace>" << std::endl;
 		return 1;
 	}
 

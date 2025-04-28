@@ -50,7 +50,7 @@ void Harl::complain(std::string level)
 	std::string typeComplains[]			= {"DEBUG", "INFO", "WARNING", "ERROR"};
 	bool						matched = false;
 
-	for (int i = 0; i < sizeof(typeComplains) / sizeof(typeComplains[0]); i++)
+	for (int i = 0; i < 4; i++)
 	{
 		if (typeComplains[i] == level)
 		{
