@@ -63,6 +63,19 @@ int main(int argc, char **argv)
 		std::cerr << "Error: search and replace strings cannot be empty." << std::endl;
 		return 2;
 	}
+
+	if(searchString == replaceString)
+	{
+		std::cerr << "Error: search and replace strings cannot be the same." << std::endl;
+		return 5;
+	}
+
+	if(searchString == " " || replaceString == " ")
+	{
+		std::cerr << "Error: search string and replace string cannot be an empty string" << std::endl;
+		return 6;
+	}
+
 	std::ifstream	inputFile(inputFilename.c_str()); //convert from String to const char * and calls constructor of ifstream
 
 	if (!inputFile.is_open())
