@@ -24,11 +24,13 @@ void replaceAndWrite(std::ifstream &inputFile, std::ofstream &outputFile, const 
 
 	while (std::getline(inputFile, line))
 	{
-		while ((pos = line.find(searchString)) != std::string::npos)
+		pos = 0;
+		while ((pos = line.find(searchString, pos)) != std::string::npos)
 		{
 			line.erase(pos, searchString.length());
 			line.insert(pos, replaceString);
 			found = true;
+			pos += replaceString.length();
 		}
 		if (isFirstLine)
 		{
@@ -38,6 +40,8 @@ void replaceAndWrite(std::ifstream &inputFile, std::ofstream &outputFile, const 
 		else
 			outputFile << std::endl << line;
 	}
+	if (!found)
+		std::cout << "Warning: No occurrences of \"" << searchString << "\" were found in the file." << std::endl;
 	if (!found)
 		std::cout << "Warning: No occurrences of \"" << searchString << "\" were found in the file." << std::endl;
 }
